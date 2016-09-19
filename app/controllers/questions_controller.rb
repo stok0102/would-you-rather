@@ -2,7 +2,11 @@ class QuestionsController < ApplicationController
   helper ApplicationHelper
 
   def index
-    @questions = Question.order(id: 'ASC')
+    if false
+      @questions = Question.where("category = ?", params[:category])
+    else
+      @questions = Question.order(id: 'ASC')
+    end
   end
 
   def update
@@ -19,5 +23,4 @@ class QuestionsController < ApplicationController
       format.js
     end
   end
-
 end
