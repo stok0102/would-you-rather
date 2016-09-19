@@ -1,24 +1,47 @@
-# README
+# Would You Rather?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails web application designed to help practice using AJAX (Asynchronous Javascript and XML).
 
-Things you may want to cover:
+User Stories:
 
-* Ruby version
+* As a user, I want to be able to see a list of questions to vote on so that I can have fun taking a survey. (To begin, consider text only questions, that record the answer and add an indicator for which was selected (text or css).)
 
-* System dependencies
+* As a user, I want to be able to choose an answer so that I can see how many others also made the same selection as I did. (Use AJAX to process answer and return totals for each response. Hint: consider using group and count methods.)
 
-* Configuration
+* TBD
 
-* Database creation
+* TBD
 
-* Database initialization
+#### Installation
 
-* How to run the test suite
+```
+$ git clone https://github.com/noahramey/would_you_rather.git
+```
+Install gem dependencies
+```
+$ bundle install
+```
+Create database
+```
+rails db:create db:setup
+```
+Start server at `localhost:3000`
+```
+rails s
+```
+* Rails version 5.0.0.1
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby version 2.3.1
 
-* Deployment instructions
+## Contact
 
-* ...
+* _[Caleb Stokka](https://www.linkedin.com/in/caleb-stokka)_
+* _[Noah Ramey](https://www.linkedin.com/in/noahramey)_
+
+
+### License
+
+*MIT License*
+
+The MIT License (MIT)
+Copyright (c) 2016, Caleb Stokka, Noah Ramey
