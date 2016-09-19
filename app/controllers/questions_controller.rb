@@ -29,7 +29,10 @@ class QuestionsController < ApplicationController
       new_votes = @question.option_two_votes += 1
       @question.update(option_two_votes: new_votes)
     end
-    redirect_to questions_path
+    respond_to do |format|
+      format.html { redirect_to questions_path }
+      format.js
+    end
   end
 
   def destroy

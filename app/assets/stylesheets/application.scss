@@ -16,7 +16,6 @@ body {
     padding-top: 1em;
     color: #fefefe;
   }
-  color: #eeeeee;
   background-color: #424242;
 }
 
@@ -51,7 +50,7 @@ header {
   }
 }
 
-input {
+input, .item {
   border: none;
   font-weight: bold;
   background-color: pink;
@@ -69,6 +68,6 @@ input {
   margin: 10px;
 }
 
-input:hover {
+.item:hover, input:hover {
   background-color: salmon;
 }

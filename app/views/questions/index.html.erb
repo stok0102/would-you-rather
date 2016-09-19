@@ -3,15 +3,13 @@
   <% @questions.each do |q| %>
   <div  class="container" id="question-<%= q.id %>">
     <div class="item">
-      <p><%= button_to q.option_one, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_one"}, :method => :patch %></p>
+      <p><%= button_to q.option_one, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_one"}, :method => :patch, remote: true %></p>
     </div>
     <div class="item">
-      <p><%= button_to q.option_two, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_two"}, :method => :patch %></p>
+      <p><%= button_to q.option_two, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_two"}, :method => :patch, remote: true %></p>
     </div>
   </div>
   <div id="results-<%= q.id %>">
-    <p><%= q.option_one %> <%= q.option_one_votes %></p>
-    <p><%= q.option_two %> <%= q.option_two_votes %></p>
   </div>
   <br>
   <% end %>

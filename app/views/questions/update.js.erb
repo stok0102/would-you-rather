@@ -1,0 +1,2 @@
+$('#question-' + <%= @question.id %>).hide()
+$('#results-' + <%= @question.id %>).html('<p class="item"><%= @question.option_one %> <%= @question.option_one_votes %></p><p class="item"><%= @question.option_two %> <%= @question.option_two_votes %></p>')
