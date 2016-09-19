@@ -1,0 +1,7 @@
+<% if @questions.any? %>
+  <% @questions.each do |q| %>
+    <p>Would you rather <%= q.option_one %> or <%= q.option_two %></p>
+    <button><%= q.option_one %></button>
+    <button><%= q.option_two %></button>
+  <% end %>
+<% end %>
