@@ -8,5 +8,5 @@ question_list = [
 ]
 
 question_list.each do |a, b|
-  Question.create( option_one: a, option_two: b)
+  Question.create( option_one: a, option_two: b, option_one_votes: 0, option_two_votes: 0)
 end

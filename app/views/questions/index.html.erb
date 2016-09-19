@@ -1,7 +1,18 @@
+<h1>Would you rather...</h1>
 <% if @questions.any? %>
   <% @questions.each do |q| %>
-    <p>Would you rather <%= q.option_one %> or <%= q.option_two %></p>
-    <button><%= q.option_one %></button>
-    <button><%= q.option_two %></button>
+  <div  class="container" id="question-<%= q.id %>">
+    <div class="item">
+      <p><%= button_to q.option_one, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_one"}, :method => :patch %></p>
+    </div>
+    <div class="item">
+      <p><%= button_to q.option_two, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_two"}, :method => :patch %></p>
+    </div>
+  </div>
+  <div id="results-<%= q.id %>">
+    <p><%= q.option_one %> <%= q.option_one_votes %></p>
+    <p><%= q.option_two %> <%= q.option_two_votes %></p>
+  </div>
+  <br>
   <% end %>
 <% end %>

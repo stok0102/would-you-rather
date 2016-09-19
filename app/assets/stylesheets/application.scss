@@ -1,0 +1,74 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  a {
+    color: #e81c4f;
+  }
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+  line-height: 1.5;
+  padding: 3em 1em;
+  h1, h3 {
+    margin-top: 1em;
+    padding-top: 1em;
+    color: #fefefe;
+  }
+  color: #eeeeee;
+  background-color: #424242;
+}
+
+header {
+  // background-image: url("header-image.jpeg");
+  background-color: #41ec75;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 5vw 2em;
+  text-align: center;
+  max-width: 100vw;
+  margin-top: 47px;
+  margin-right: -20px;
+  margin-left: -20px;
+  a {
+    border: 2px solid #e81c4f;
+    border-radius: 290486px;
+    color: white;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: none 200ms ease-out;
+    transition-property: color, background;
+  }
+  a:hover {
+    background:  #e81c4f;
+    color: white;
+  }
+}
+
+input {
+  border: none;
+  font-weight: bold;
+  background-color: pink;
+  line-height: 5em;
+  font-size: 1.3em;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+}
+
+.item {
+  margin: 10px;
+}
+
+input:hover {
+  background-color: salmon;
+}
