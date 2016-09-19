@@ -1,2 +1,2 @@
 $('#question-' + <%= @question.id %>).hide()
-$('#results-' + <%= @question.id %>).html('<p class="item"><%= @question.option_one %> <%= @question.option_one_votes %></p><p class="item"><%= @question.option_two %> <%= @question.option_two_votes %></p>')
+$('#results-' + <%= @question.id %>).html('<p class="item"><%= @question.option_one %>: <%= percent(@question.option_one_votes, @question.option_two_votes) %>% of votes</p><p class="item"><%= @question.option_two %>: <%= percent(@question.option_two_votes, @question.option_one_votes) %>% of votes</p>')

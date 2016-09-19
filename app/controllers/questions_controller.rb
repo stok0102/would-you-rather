@@ -1,23 +1,8 @@
 class QuestionsController < ApplicationController
+  helper ApplicationHelper
+
   def index
     @questions = Question.order(id: 'ASC')
-  end
-
-  def new
-    @question = Question.new
-  end
-
-  def create
-    @question = Question.new(question_params)
-    if @question.save
-      redirect_to questions_path
-    else
-      render :create
-    end
-  end
-
-  def edit
-    @question = Question.find(params[:id])
   end
 
   def update
@@ -33,12 +18,6 @@ class QuestionsController < ApplicationController
       format.html { redirect_to questions_path }
       format.js
     end
-  end
-
-  def destroy
-    @question = Question.find(params[:id])
-    @question.destroy
-    redirect_to questions_path
   end
 
 end
