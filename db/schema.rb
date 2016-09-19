@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160919175522) do
+ActiveRecord::Schema.define(version: 20160919231253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20160919175522) do
     t.string   "option_two"
     t.integer  "option_one_votes"
     t.integer  "option_two_votes"
+    t.string   "category"
   end
 
 end
