@@ -1,4 +1,8 @@
 FactoryGirl.define do
+  factory :comment do
+    content "MyString"
+    question nil
+  end
   factory :question do
     option_one 'never use toilet paper again'
     option_two 'not have a butthole'

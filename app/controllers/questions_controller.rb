@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
 
   def index
     if params[:sort]
-      @questions = Question.where(category: params[:sort])
+      @questions = Question.search(params[:sort])
     else
       @questions = Question.order(id: 'ASC')
     end

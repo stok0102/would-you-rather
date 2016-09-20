@@ -1,19 +1,4 @@
 <h1>Would you rather...</h1>
-<% if @questions.any? %>
-  <% @questions.each do |q| %>
-  <div  class="container" id="question-<%= q.id %>">
-    <div class="item">
-      <p><%= button_to q.option_one, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_one"}, :method => :patch, remote: true %></p>
-    </div>
-    <div class="item">
-      <p><%= button_to q.option_two, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_two"}, :method => :patch, remote: true %></p>
-    </div>
-  </div>
-  <div id="results-<%= q.id %>">
-  </div>
-  <br>
-  <div class="categories">
-    <%= link_to q.category, :sort => q.category %>
-  </div>
-  <% end %>
-<% end %>
+<div class="questions">
+  <%= render 'questions' %>
+</div>

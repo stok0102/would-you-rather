@@ -50,7 +50,7 @@ header {
   }
 }
 
-input, .item {
+.item input{
   border: none;
   font-weight: bold;
   background-color: pink;
@@ -68,6 +68,9 @@ input, .item {
   margin: 10px;
 }
 
-.item:hover, input:hover {
+.item:hover {
   background-color: salmon;
 }
+ .details {
+   background-color: white;
+ }

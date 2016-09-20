@@ -1,0 +1,39 @@
+<% if @questions.any? %>
+  <% @questions.each do |q| %>
+  <div  class="container" id="question-<%= q.id %>">
+    <div class="item">
+      <p><%= button_to q.option_one, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_one"}, :method => :patch, remote: true %></p>
+    </div>
+    <div class="item">
+      <p><%= button_to q.option_two, { :controller => "questions", :action => "update", :id => q.id, :choice => "option_two"}, :method => :patch, remote: true %></p>
+    </div>
+  </div>
+  <div class="details">
+
+  <div id="results-<%= q.id %>">
+  </div>
+  <br>
+  <div class="categories">
+    <%= link_to q.category, :sort => q.category %>
+  </div>
+  <div class="comments">
+
+    <ul id="comments-list-<%= q.id %>">
+    <% if q.comments.any? %>
+      <% q.comments.each do |comment| %>
+        <li><%= comment.content %></li>
+      <% end %>
+    <% else %>
+      there are no comments.
+    <% end %>
+
+  </ul>
+  <%= form_for [q, q.comments.new], remote: true do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+  <% end %>
+  </div>
+</div>
+  <% end %>
+<% end %>
