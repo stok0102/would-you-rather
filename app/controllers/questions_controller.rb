@@ -2,8 +2,8 @@ class QuestionsController < ApplicationController
   helper ApplicationHelper
 
   def index
-    if false
-      @questions = Question.where("category = ?", params[:category])
+    if params[:sort]
+      @questions = Question.where(category: params[:sort])
     else
       @questions = Question.order(id: 'ASC')
     end

@@ -8,7 +8,7 @@ User Stories:
 
 * As a user, I want to be able to choose an answer so that I can see how many others also made the same selection as I did. (Use AJAX to process answer and return totals for each response. Hint: consider using group and count methods.)
 
-* TBD
+* As a user, I want to be able to choose a category and see all the questions in that category
 
 * TBD
 
