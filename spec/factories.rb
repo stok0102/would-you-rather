@@ -4,5 +4,6 @@ FactoryGirl.define do
     option_two 'not have a butthole'
     option_one_votes 0
     option_two_votes 0
+    category 'butt stuff'
   end
 end
